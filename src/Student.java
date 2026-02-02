@@ -33,24 +33,4 @@ public final class Student implements HasId {
     public int id() {
         return id;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (Student) obj;
-        return this.id == that.id &&
-                Objects.equals(this.name, that.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
-    }
-
-    @Override
-    public String toString() {
-        return "Student[id=%d, name=%s]".formatted(id, name);
-    }
-
 }
